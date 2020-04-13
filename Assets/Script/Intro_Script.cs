@@ -20,7 +20,7 @@ using UnityEngine;
 public class Intro_Script : MonoBehaviour
 {
     //Type membre de la classe
-    public struct Coord
+    /*public struct Coord
     {
       
 
@@ -33,11 +33,11 @@ public class Intro_Script : MonoBehaviour
         public int nX { get; set; }
         public int nY { get; set; }
 
-    }
+    }*/
     // Start is called before the first frame update
     void Start()
     {
-        int nA = 10;
+        /*int nA = 10;
         Debug.Log("Ma val est : " + nA);
         float fltReel = 2f;
         double dblReel = 4f;
@@ -58,7 +58,7 @@ public class Intro_Script : MonoBehaviour
         Debug.Log(cCar);
         Debug.Log(sChaine);
         Debug.Log(tCoord.nX +" et " + tCoord.nY);
-        Debug.Log(nTab[0]);
+        Debug.Log(nTab[0]);*/
     }
 
     // Update is called once per frame
@@ -67,8 +67,11 @@ public class Intro_Script : MonoBehaviour
         /*float timer = 0f;
         timer += Time.deltaTime;
 
-        Debug.Log("Delta Time :" + timer);*/
-
+        Debug.Log("Delta Time :" + timer);
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Debug.Log("Key pressed enter");
+        }
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             Debug.Log("Key pressed up Arrow");
@@ -76,11 +79,8 @@ public class Intro_Script : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             Debug.Log("Key pressed down Arrow");
-        }else
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            Debug.Log("Key pressed enter");
-        }
+        }*/
+        
 
 
 
