@@ -14,12 +14,13 @@ public class Intro_Script2 : MonoBehaviour
     //public string[] sString;
     [SerializeField] string[] sString=default;
     //SerializeField
-    //[SerializeField] State StartingState;
+    [SerializeField] State StartingState;
 
     //private member
     State state;
     Text MainText;
 
+    State[] tArrayState;
     //Lors du chargement de l'instance programme
     void Awake()
     {
@@ -39,13 +40,13 @@ public class Intro_Script2 : MonoBehaviour
         
         //Debug.Log(MainText.name);
         //MainText.text = "Salut";
-        //state = StartingState;
+        state = StartingState;
 
-        state = State.CreateInstance<State>();
+        //state = State.CreateInstance<State>();
         //Debug.Log("Name state :" + state.name);
-        state.setStateStory(" lobortis augue vitae metus imperdiet, a laoreet turpis suscipit." +
-            " Nunc pharetra condimentum turpis, ut mollis mi convallis in." + " Nulla facilisi. Integer turpis sem, lacinia ut ornare at, egestas nec dolor. " +
-            "Quisque cursus ex vel finibus rutrum. Phasellus semper consectetur commodo. Proin vel lacus nunc. Sed felis");
+        //state.setStateStory(" lobortis augue vitae metus imperdiet, a laoreet turpis suscipit." +
+        //    " Nunc pharetra condimentum turpis, ut mollis mi convallis in." + " Nulla facilisi. Integer turpis sem, lacinia ut ornare at, egestas nec dolor. " +
+        //    "Quisque cursus ex vel finibus rutrum. Phasellus semper consectetur commodo. Proin vel lacus nunc. Sed felis");
 
 
         MainText = GameObject.Find("MainText").GetComponent<Text>();
@@ -58,7 +59,7 @@ public class Intro_Script2 : MonoBehaviour
         {
             Debug.Log("SerializeField StartingState is not set");
         }
-        
+        tArrayState = state.GetNextStates();
 
 
     }
@@ -66,6 +67,13 @@ public class Intro_Script2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //MainText.text = tArrayState[0].GetSateStory();
+
+        manageState();
+
+
+
+
         //switchIndexTab();
         /*for (int i = 0; i<sString.Length; i++)
         {
@@ -162,7 +170,33 @@ public class Intro_Script2 : MonoBehaviour
                 decrease();
             }
         }
+    
+    }
+    private void manageState()
+    {
+        var nextStates = tArrayState;
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            state = nextStates[0];
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            state = nextStates[1];
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            state = nextStates[2];
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            state = nextStates[3];
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            state = nextStates[4];
+        }
 
+        MainText.text = state.GetSateStory();
 
 
     }

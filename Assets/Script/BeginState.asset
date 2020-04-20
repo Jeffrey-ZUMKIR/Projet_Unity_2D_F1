@@ -12,12 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9b9c35b4a7a97428e9d6d04c158a74, type: 3}
   m_Name: BeginState
   m_EditorClassIdentifier: 
-  storyText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris augue
-    elit, euismod at massa a, accumsan maximus ipsum. Sed dolor elit, tristique in
-    cursus sit amet, hendrerit quis mauris. Nullam lobortis augue vitae metus imperdiet,
-    a laoreet turpis suscipit. Nunc pharetra condimentum turpis, ut mollis mi convallis
-    in. Nulla facilisi. Integer turpis sem, lacinia ut ornare at, egestas nec dolor.
-    Quisque cursus ex vel finibus rutrum. Phasellus semper consectetur commodo. Proin
-    vel lacus nunc. Sed felis purus, elementum sed urna eu, aliquet auctor eros. Duis
-    sed lacus lacinia, imperdiet dui in, maximus dolor. Morbi eu lacus et enim fringilla
-    porta.
+  storyText: Story Game
+  nextStates:
+  - {fileID: 11400000, guid: 8c9415f05cc93d340bf630b9556902a4, type: 2}
+  - {fileID: 11400000, guid: 3d63a26a613499d438783381a56d16f2, type: 2}
+  - {fileID: 11400000, guid: 8e2fee51c38681f42beb7af9b44233d5, type: 2}
+  - {fileID: 11400000, guid: 34e959baff1f7854e80e9b0967068b5e, type: 2}
+  - {fileID: 11400000, guid: 60c3a400f8480754685dc9f38cc44ab6, type: 2}
