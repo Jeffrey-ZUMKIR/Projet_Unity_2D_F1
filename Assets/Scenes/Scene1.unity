@@ -627,3 +627,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b7fb2a1be8d7a348b652282ea103946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sString: []
+  StartingState: {fileID: 11400000, guid: 228591d64bb91e5409b7122c55ff14c0, type: 2}
